@@ -1,8 +1,13 @@
-## Major web applications clone in reactjs 
+<p align="center">
+<img align="center" src="src/whatsappwebclone.png" width="100%" alt="whatsapp web clone in reactjs"/>
+</p>
+A React whatsapp web clone
 
-cloning several different web applications in react, these might not be a full functional clone, but atleast would do every basic thing.
 
 
-#### first is whatsapp web clone 
+### STEPS TO USING THIS PROJECT
 
-i cloned the whatsapp in react, and i also used some third-party library like firebase.
+* clone the repo or download it *
+
+Run `yarn install`
+then cd into the directory and run `yarn start`
