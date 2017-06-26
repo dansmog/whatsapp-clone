@@ -2,6 +2,74 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      contacts: [
+        {
+          "id": 1,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "Fellowship",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 2,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "CSC GROUP 19",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 3,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "uno",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 4,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "snapshop",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 5,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "Taiwo jide",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 6,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "Daniel anthony",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 7,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "Diagram",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 8,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "Noob2Hackers",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 9,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "Frontednd Code",
+          "lastMessage": "Bro smart: what i think this should be..."
+        },
+        {
+          "id": 10,
+          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "name": "Whogorent",
+          "lastMessage": "Bro smart: what i think this should be..."
+        }
+
+      ]
+    }
+  }
   render() {
     return (
       <div className="app">
@@ -25,46 +93,36 @@ class App extends Component {
             
             <div className="list">
               
-              <div className="list--item">
-                <div className="list--item__image">
-                  <img src="http://www.joshfinnie.com/assets/images/josh-tm.jpeg" alt={'user profile picture'}/>
-                </div>
-                <div className="list--item__details">
-                  <h3>Fellowship</h3>
-                  <p>Bro smart: what i think this should be...</p>
-                </div>
-              </div>
-              
-              <div className="list--item">
-                <div className="list--item__image">
-                  <img src="http://www.joshfinnie.com/assets/images/josh-tm.jpeg" alt={'user profile picture'}/>
-                </div>
-                <div className="list--item__details">
-                  <h3>Fellowship</h3>
-                  <p>Bro smart: what i think this should be...</p>
-                </div>
-              </div>
-              <div className="list--item">
-                <div className="list--item__image">
-                  <img src="http://www.joshfinnie.com/assets/images/josh-tm.jpeg" alt={'user profile picture'}/>
-                </div>
-                <div className="list--item__details">
-                  <h3>Fellowship</h3>
-                  <p>Bro smart: what i think this should be...</p>
-                </div>
-              </div>
-              
+              {
+                this.state.contacts.map(function(item){
+                  return(
+                     <div className="list--item" key={item.id}>
+                        <div className="list--item__image">
+                          <img src={item.profilePhoto} alt={item.name}/>
+                        </div>
+                        <div className="list--item__details">
+                          <h3>{item.name}</h3>
+                          <p>{item.lastMessage}</p>
+                        </div>
+                     </div>
+                  )
+                })
+              }
+             
+            
             </div>
             
           </div>
           
-          <div className="view">
-            <div className="view--whatsapp">
-                <img src={require('./images/whatsapp.png')} alt={"whatsapp key point"} />
+          <div className="view" style={{"display": "flex", "flexGrow": "1", "justifyContent": "center", "alignItems": "center"}}>
+
+            <div className="view--whatsapp" style={{"alignSelf": "center", "textAlign": "center"}}>
+                <img src={require('./images/whatsapp.png')} alt={"whatsapp key point"} style={{"width": "250px"}} />
                 <h2>keep you phone connected</h2>
-                <p>whatsapp connects to your phone to sync messages. To reduce data usage, connect your phone to wifi</p>
+                <p>whatsapp connects to your phone to sync messages. To reduce data <br/>usage, connect your phone to wifi</p>
             </div>
-            <div className="view--chats"></div>
+
+            
           </div>
     
       </div>
