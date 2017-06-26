@@ -14,31 +14,31 @@ class App extends Component {
         },
         {
           "id": 2,
-          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "profilePhoto" : "http://loremflickr.com/g/320/240/paris",
           "name": "CSC GROUP 19",
           "lastMessage": "Bro smart: what i think this should be..."
         },
         {
           "id": 3,
-          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "profilePhoto" : "https://s.yimg.com/pw/images/buddyicon11_r.png#76029035@N02",
           "name": "uno",
           "lastMessage": "Bro smart: what i think this should be..."
         },
         {
           "id": 4,
-          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "profilePhoto" : "http://loremflickr.com/320/240/business",
           "name": "snapshop",
           "lastMessage": "Bro smart: what i think this should be..."
         },
         {
           "id": 5,
-          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "profilePhoto" : "http://loremflickr.com/320/240/computers",
           "name": "Taiwo jide",
           "lastMessage": "Bro smart: what i think this should be..."
         },
         {
           "id": 6,
-          "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
+          "profilePhoto" : "http://loremflickr.com/320/240",
           "name": "Daniel anthony",
           "lastMessage": "Bro smart: what i think this should be..."
         },
