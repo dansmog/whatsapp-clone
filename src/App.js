@@ -70,7 +70,7 @@ class App extends Component {
         }
 
       ],
-      activeChat: false
+      activeChat: true
     }
 
   }
@@ -80,7 +80,7 @@ class App extends Component {
     return (
       <div className="app">
           <ChatList contacts={this.state.contacts}/>
-          <View activeChat={this.props.activeChat}/>
+          <View visibility={this.state.activeChat}/>
       </div>
     );
   }

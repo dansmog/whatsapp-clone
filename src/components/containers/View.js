@@ -4,10 +4,13 @@ import ViewChatHistory          from './ViewChatHistory';
 
 class View extends Component {
     render(){
+        let visibility = this.props.visibility;
+        console.log(visibility);
+        let view;
+        { view = (visibility) ? <ViewChatHistory /> : <ViewWhatsapp />; }
         return(
          <div className="view" style={{"display": "flex", "flexGrow": "1", "justifyContent": "center", "alignItems": "center"}}>
-                <ViewWhatsapp />
-                <ViewChatHistory />
+                { view }
           </div>
         )
     }
