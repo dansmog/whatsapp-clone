@@ -12,7 +12,12 @@ class App extends Component {
           "id": 1,
           "profilePhoto" : "http://www.joshfinnie.com/assets/images/josh-tm.jpeg",
           "name": "Fellowship",
-          "lastMessage": "Bro smart: what i think this should be..."
+          "lastMessage": "Bro smart: what i think this should be...",
+          "chats": [
+            {
+              'namesender': "daniel"
+            }
+          ]
         },
         {
           "id": 2,
@@ -70,20 +75,38 @@ class App extends Component {
         }
 
       ],
-      activeChat: true
+      activeChat: false
     }
 
   }
 
+  
 
   render() {
     return (
       <div className="app">
-          <ChatList contacts={this.state.contacts}/>
-          <View visibility={this.state.activeChat}/>
+          <ChatList contacts={this.state.contacts} />
+          <View visibility={this.state.activeChat} />
       </div>
     );
   }
+
+
+  /** @params contact ==  the return value of getSelectedContact() */
+  // showChatView(contact){
+  //   return selectedContactToChat = contact;
+  // }
+
+  // getSelectedContact = (id) => {
+  //   let contacts = this.state.contacts;
+  //   let selectedContact = contacts.filter( (contact) => {
+  //     return contact.id === id;
+  //   })
+  //   this.setState({ activeChat: true})
+  //   showChatView(selectedContact);
+  // }
+
+
 }
 
 export default App;

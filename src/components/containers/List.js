@@ -4,7 +4,7 @@ import ListItem                 from '../presentational/ListItem';
 class List extends Component {
     render(){
         let listitem = this.props.contacts.map((item) => {
-            return <ListItem item={item} key={item.id}/>
+            return <ListItem item={item} key={item.id} />
         })
         return(
             <div className="list">

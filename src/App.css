@@ -15,8 +15,40 @@
 .chatlist--header,
 .app,
 .list--item,
-.view {
+.view,
+.view--chat,
+header .user-details,
+.view--chat__history, 
+.view--chat__history .chats, 
+.chat--input{
     display: flex;
+}
+.view--chat__history,
+.view--chat__history .chats{
+    flex-direction:column;    
+}
+.view--chat header {
+    display: flex;
+    justify-content: space-between;
+    background: #eee;
+    padding: 8px 40px;
+}
+.view--chat__history .chats{
+    height:524px;
+    overflow-y:scroll;
+}
+.chat--input{
+    background:#f3f1ee;
+    padding:15px;
+}
+.user-details, .chat--input{
+    justify-content: center;
+    align-items: center;
+}
+.chat--input input{border:0;background:#fff;color:#000;}
+.view--chat {
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .chatlist {
@@ -24,7 +56,7 @@
     background-color: #fff;
     height: 100vh;
     width: 30%;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #ddd;
 }
 
 .chatlist--header {
@@ -41,6 +73,7 @@
 .chatlist--header__icons {
     margin-top: 10px;
 }
+
 
 .chatlist--header__icons .material-icons {
     cursor: pointer;
