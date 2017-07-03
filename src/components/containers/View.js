@@ -7,7 +7,7 @@ class View extends Component {
         let visibility = this.props.visibility;
         console.log(visibility);
         let view;
-        view = (visibility) ? <ViewChatHistory /> : <ViewWhatsapp />
+        view = (visibility) ? <ViewChatHistory/> : <ViewWhatsapp />
         return(
          <div className="view" style={{"display": "flex", "flexGrow": "1"}}>
                 { view }

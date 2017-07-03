@@ -18,34 +18,46 @@
 .view,
 .view--chat,
 header .user-details,
-.view--chat__history, 
-.view--chat__history .chats, 
-.chat--input{
+.view--chat__history,
+.view--chat__history .chats,
+.chat--input {
     display: flex;
 }
+
 .view--chat__history,
-.view--chat__history .chats{
-    flex-direction:column;    
+.view--chat__history .chats {
+    flex-direction: column;
 }
+
 .view--chat header {
     display: flex;
     justify-content: space-between;
     background: #eee;
     padding: 8px 40px;
 }
-.view--chat__history .chats{
-    height:524px;
-    overflow-y:scroll;
+
+.view--chat__history .chats {
+    height: 524px;
+    overflow-y: scroll;
 }
-.chat--input{
-    background:#f3f1ee;
-    padding:15px;
+
+.chat--input {
+    background: #f3f1ee;
+    padding: 15px;
 }
-.user-details, .chat--input{
+
+.user-details,
+.chat--input {
     justify-content: center;
     align-items: center;
 }
-.chat--input input{border:0;background:#fff;color:#000;}
+
+.chat--input input {
+    border: 0;
+    background: #fff;
+    color: #000;
+}
+
 .view--chat {
     flex-direction: column;
     flex-grow: 1;
@@ -73,7 +85,6 @@ header .user-details,
 .chatlist--header__icons {
     margin-top: 10px;
 }
-
 
 .chatlist--header__icons .material-icons {
     cursor: pointer;

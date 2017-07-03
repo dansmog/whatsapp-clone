@@ -9,7 +9,7 @@ class ViewChatHistory extends Component{
                 <header>
 
                     <div className="user-details">
-                        <img src={require('../../images/profile.jpg')} style={{"width": "45px", "height": "40px", "borderRadius": "100%", "margin-right": "20px"}} alt={""}/>
+                        <img src={require('../../images/profile.jpg')} style={{"width": "45px", "height": "40px", "borderRadius": "100%", "marginRight": "20px"}} alt={""}/>
                         <div className="user-details-name">
                             <h3>Fellowship</h3>
                         </div>
@@ -30,9 +30,9 @@ class ViewChatHistory extends Component{
                   </article>
 
                   <footer className="chat--input">
-                        <i class="material-icons">&#xE7F2;</i>
-                        <input type="text" refs="message" placeholder="Type a message" style={{"flexGrow": "1", "margin": "0 40px", "padding": "9px 15px"}}/>
-                        <i class="material-icons">&#xE31D;</i>
+                        <i className="material-icons">&#xE7F2;</i>
+                        <input type="text" ref="message" placeholder="Type a message" style={{"flexGrow": "1", "margin": "0 40px", "padding": "9px 15px"}}/>
+                        <i className="material-icons">&#xE31D;</i>
                   </footer>
                 </main>
 
