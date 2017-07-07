@@ -143,7 +143,7 @@ class App extends Component {
     return (
       <div className="app">
           <ChatList contacts={ contacts } getChats={ this.getChats }/>
-          <View visibility={ chatHistoryVisible } contacts={ selectedContactChat }/>
+          <View visibility={ chatHistoryVisible } selectedContact={ selectedContactChat }/>
       </div>
     );
   }
@@ -151,11 +151,17 @@ class App extends Component {
 
    getChats = (event, id) => {
      event.preventDefault();
-     this.setState({chatHistoryVisible: true});
-     this.setState({ selectedChat: id})
+
+     const { contacts, selectedContactChat } = this.state;
+     let chat = []
+     contacts.filter( (contact) => {
+        if (contact.id === id) {
+          return chat = [...chat, contact]
+        }
+     })
+
+     this.setState({ chatHistoryVisible: true, selectedChat: id, selectedContactChat: chat });
    }
-
-
 
 }
 
