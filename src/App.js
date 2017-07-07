@@ -16,7 +16,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Daniel":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -28,7 +28,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Gbenga":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -40,7 +40,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Daniel":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -52,7 +52,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Damilola":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -64,7 +64,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Daniel":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -76,7 +76,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Daniel":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -88,7 +88,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Daniel":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -100,7 +100,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Daniel":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -112,7 +112,7 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Daniel":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         },
@@ -124,46 +124,37 @@ class App extends Component {
           "chats": [
             {
               "activeUser" : "i will come to school soon",
-              "Daniel":  "i will be there too.. just give me few minutes"
+              "receiver":  "i will be there too.. just give me few minutes"
             }
           ]
         }
 
       ],
       chatHistoryVisible: false,
-      selectedChat: null
+      selectedChat: 0,
+      selectedContactChat: []
     }
 
   }
-   getChats = (id) => {
-     this.setState({chatHistoryVisible: true});
-     this.setState({ selectedChat: id})
-   }
-  
+
 
   render() {
+    const { contacts, chatHistoryVisible, selectedContactChat } = this.state;
     return (
       <div className="app">
-          <ChatList contacts={this.state.contacts } getChats={ this.getChats }/>
-          <View visibility={ this.state.chatHistoryVisible } selectedChat={ this.state.selectedChat }/>
+          <ChatList contacts={ contacts } getChats={ this.getChats }/>
+          <View visibility={ chatHistoryVisible } contacts={ selectedContactChat }/>
       </div>
     );
   }
 
 
-  /** @params contact ==  the return value of getSelectedContact() */
-  // showChatView(contact){
-  //   return selectedContactToChat = contact;
-  // }
+   getChats = (event, id) => {
+     event.preventDefault();
+     this.setState({chatHistoryVisible: true});
+     this.setState({ selectedChat: id})
+   }
 
-  // getSelectedContact = (id) => {
-  //   let contacts = this.state.contacts;
-  //   let selectedContact = contacts.filter( (contact) => {
-  //     return contact.id === id;
-  //   })
-  //   this.setState({ activeChat: true})
-  //   showChatView(selectedContact);
-  // }
 
 
 }

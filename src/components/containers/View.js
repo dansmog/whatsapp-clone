@@ -5,9 +5,10 @@ import ViewChatHistory          from './ViewChatHistory';
 class View extends Component {
     render(){
         let visibility = this.props.visibility;
+        console.log(this.props.contacts);
         console.log(visibility);
         let view;
-        view = (visibility) ? <ViewChatHistory/> : <ViewWhatsapp />
+        view = (visibility) ? <ViewChatHistory selectedContactChat={ this.props.contacts } /> : <ViewWhatsapp />
         return(
          <div className="view" style={{"display": "flex", "flexGrow": "1"}}>
                 { view }
@@ -16,4 +17,4 @@ class View extends Component {
     }
 }
 
-export default View;
+export default View;   

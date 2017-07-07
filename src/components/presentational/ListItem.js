@@ -4,7 +4,7 @@ class ListItem extends Component {
     render(){
       let item = this.props.item;
       return (
-         <div className="list--item" onClick={ () => { this.props.getChats(item.id) } }>
+         <div className="list--item" onClick={ (event) => { this.props.getChats(event, item.id) } }>
             <div className="list--item__image">
                 <img src={item.profilePhoto} alt={item.name}/>
             </div>
