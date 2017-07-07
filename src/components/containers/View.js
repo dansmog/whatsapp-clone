@@ -5,7 +5,6 @@ import ViewChatHistory          from './ViewChatHistory';
 class View extends Component {
     render(){
         let visibility = this.props.visibility;
-        console.log(this.props.selectedContact);
         let view;
         view = (visibility) ? <ViewChatHistory selectedContactChat={ this.props.selectedContact } /> : <ViewWhatsapp />
         return(

@@ -33,7 +33,7 @@ header .user-details,
     display: flex;
     justify-content: space-between;
     background: #eee;
-    padding: 8px 40px;
+    padding: 21px 40px;
 }
 
 .view--chat__history .chats {
